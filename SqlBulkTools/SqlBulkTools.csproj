@@ -1,13 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageId>SqlBulkTools.NetCore</PackageId>
+        <Authors>Mihaita Hantea</Authors>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+        <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+    </ItemGroup>
 
+    <ItemGroup>
+        <None Include="licenses\LICENSE" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    
 </Project>
