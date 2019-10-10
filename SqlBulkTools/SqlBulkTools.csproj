@@ -5,7 +5,7 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageId>SqlBulkTools.NetCore</PackageId>
-        <Authors>Mihaita Hantea</Authors>
+        <Authors>Mihaita Hantea, gtaylor44 , d3nver, Zek99</Authors>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="licenses\LICENSE" Pack="true" PackagePath=""/>
+        <None Include="licenses\LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
     
 </Project>
