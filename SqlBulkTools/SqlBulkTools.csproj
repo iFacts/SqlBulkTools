@@ -1,109 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5CD2EE50-A2E1-4740-AEE4-87E9928F0230}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SqlBulkTools</RootNamespace>
-    <AssemblyName>SqlBulkTools</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\SqlBulkTools.XML</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Release\SqlBulkTools.xml</DocumentationFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="BulkOperations\AbstractColumnSelection.cs" />
-    <Compile Include="BulkOperations\AbstractOperation.cs" />
-    <Compile Include="BulkOperations\BulkCopyOptions.cs" />
-    <Compile Include="Core\BulkOperationsUtility.cs" />
-    <Compile Include="Core\Table.cs" />
-    <Compile Include="Interface\IBulkOperations.cs" />
-    <Compile Include="QueryOperations\Delete\DeleteAllRecordsQueryReady.cs" />
-    <Compile Include="QueryOperations\Delete\DeleteQueryCondition.cs" />
-    <Compile Include="QueryOperations\Delete\DeleteQueryReady.cs" />
-    <Compile Include="QueryOperations\Delete\DeleteQueryTable.cs" />
-    <Compile Include="QueryOperations\Delete\DeleteQuery.cs" />
-    <Compile Include="QueryOperations\QueryInsertReady.cs" />
-    <Compile Include="QueryOperations\QueryAddColumnList.cs" />
-    <Compile Include="QueryOperations\QueryForObject.cs" />
-    <Compile Include="QueryOperations\QueryTable.cs" />
-    <Compile Include="QueryOperations\QueryUpdateReady.cs" />
-    <Compile Include="QueryOperations\QueryUpdateCondition.cs" />
-    <Compile Include="QueryOperations\QueryAddColumn.cs" />
-    <Compile Include="QueryOperations\QueryUpsertReady.cs" />
-    <Compile Include="Enumeration\ColumnDirectionType.cs" />
-    <Compile Include="Helper\PredicateCondition.cs" />
-    <Compile Include="BulkOperations\BulkTable.cs" />
-    <Compile Include="DataTableOperations\DataTableAbstractColumnSelect.cs" />
-    <Compile Include="DataTableOperations\DataTableOperations.cs" />
-    <Compile Include="DataTableOperations\DataTableAllColumnSelect.cs" />
-    <Compile Include="BulkOperations\BulkAddColumnList.cs" />
-    <Compile Include="BulkOperations\BulkDelete.cs" />
-    <Compile Include="BulkOperations\BulkInsert.cs" />
-    <Compile Include="BulkOperations\BulkInsertOrUpdate.cs" />
-    <Compile Include="Helper\BulkOperationsHelper.cs" />
-    <Compile Include="BulkOperations\BulkUpdate.cs" />
-    <Compile Include="DataTableOperations\DataTableSingularColumnSelect.cs" />
-    <Compile Include="BulkOperations\BulkAddColumn.cs" />
-    <Compile Include="Helper\Constants.cs" />
-    <Compile Include="DataTableOperations\DataTableColumns.cs" />
-    <Compile Include="Interface\IDataTableOperations.cs" />
-    <Compile Include="Interface\IDataTableTransaction.cs" />
-    <Compile Include="Exception\IdentityException.cs" />
-    <Compile Include="Interface\ITransaction.cs" />
-    <Compile Include="Enumeration\OperationType.cs" />
-    <Compile Include="Enumeration\PredicateType.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataTableOperations\SetupDataTable.cs" />
-    <Compile Include="Core\Setup.cs" />
-    <Compile Include="Core\BulkOperations.cs" />
-    <Compile Include="Exception\SqlBulkToolsException.cs" />
-    <Compile Include="BulkOperations\BulkForCollection.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageId>SqlBulkTools.NetCore</PackageId>
+        <Authors>Mihaita Hantea, gtaylor44 , d3nver, Zek99</Authors>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+        <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="licenses\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
+    
 </Project>

@@ -9,7 +9,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.SqlServer.Types;
 using SqlBulkTools.Core;
 using SqlBulkTools.Enumeration;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -812,13 +811,13 @@ namespace SqlBulkTools
         /// <returns></returns>
         private static bool CheckForValidDataType(Type type, bool throwIfInvalid = false)
         {
-
+            //TODO fix spatial data when implemented in .NET Core
             if (type.IsValueType ||
                 type == typeof(string) ||
                 type == typeof(byte[]) ||
                 type == typeof(char[]) ||
-                type == typeof(SqlGeometry) ||
-                type == typeof(SqlGeography) ||
+                //type == typeof(SqlGeometry) ||
+                //type == typeof(SqlGeography) ||
                 type == typeof(SqlXml)
                 )
                 return true;

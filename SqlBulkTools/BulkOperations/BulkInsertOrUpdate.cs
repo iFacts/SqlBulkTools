@@ -401,5 +401,16 @@ namespace SqlBulkTools
             return comm;
         }
 
+        public BulkInsertOrUpdate<T> SetCollationOnColumn(Expression<Func<T, object>> columnName, string collation)
+        {
+            var propertyName = BulkOperationsHelper.GetPropertyName(columnName);
+
+            if (propertyName == null)
+                throw new NullReferenceException("MatchTargetOn column name can't be null.");
+
+            SetCollation(propertyName, collation);
+
+            return this;
+        }
     }
 }
