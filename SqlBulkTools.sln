@@ -1,13 +1,13 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBulkTools.UnitTests", "SqlBulkTools.UnitTests\SqlBulkTools.UnitTests.csproj", "{D20B543C-C7E2-40C4-8402-EE0CBC93E837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlBulkTools.UnitTests", "SqlBulkTools.UnitTests\SqlBulkTools.UnitTests.csproj", "{D20B543C-C7E2-40C4-8402-EE0CBC93E837}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBulkTools.TestCommon", "SqlBulkTools.TestCommon\SqlBulkTools.TestCommon.csproj", "{DCF50704-D460-4636-B4C4-9AEAF17AAC81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlBulkTools.TestCommon", "SqlBulkTools.TestCommon\SqlBulkTools.TestCommon.csproj", "{DCF50704-D460-4636-B4C4-9AEAF17AAC81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBulkTools.IntegrationTests", "SqlBulkTools.IntegrationTests\SqlBulkTools.IntegrationTests.csproj", "{6CE3CC1D-C18B-43B2-8A75-F1C5C0A2D3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlBulkTools.IntegrationTests", "SqlBulkTools.IntegrationTests\SqlBulkTools.IntegrationTests.csproj", "{6CE3CC1D-C18B-43B2-8A75-F1C5C0A2D3FA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlBulkTools", "SqlBulkTools\SqlBulkTools.csproj", "{189A4E52-DBB9-47EA-AE30-9921F99BA3A0}"
 EndProject
